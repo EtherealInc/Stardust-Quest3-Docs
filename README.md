@@ -103,4 +103,51 @@ sudo dnf install android-tools
 ```
 Download the latest Envision [AppIamge ](https://gitlab.com/gabmus/envision/-/pipelines?ref=main&status=success)
 
+Open the Envision App Image and Build the WiVrn Default Profile
+
+You may have to install a few more packages
+
+```
+sudo dnf install -y boost-devel
+```
+```
+sudo dnf install -y librsvg2-devel
+```
+```
+sudo dnf install -y libarchive-devel
+```
+### Enable Developer mode on the quest 3
+Via the Meta/Horizon phone app → Menu → Devices → your Quest → Developer Mode
+
+Plug the Quest 3 into your Fedora PC via USB-C.
+
+Put on the headset and accept “Allow USB debugging?” → Always allow / Allow.
+
+In Envision on the PC:
+
+Select your WiVRn profile (bottom dropdown).
+
+Click “Install WiVRn”.
+That should push the APK to the headset (shows up later under Library → Unknown Sources).
+
+If for some reason the install did not work, you can manually install the WiVrn-standard-release.apk from [WiVrn](https://github.com/WiVRn/WiVRn/releases)
+
+Install manually:
+```
+adb install -r ~/Downloads/WiVRn-standard-release.apk
+```
+If all goes well you should be able to run WiVrn on the headset and click start WiVrn on desktop to pair 
+
+In a seperate terminal run
+```
+telescope
+```
+and you should see Stardust running with HexagonLauncher
+
+
+
+
+
+
+
 
